@@ -53,8 +53,8 @@ export const loveData = {
     },
     {
       id: 4,
-      title: "3 Years of Unbreakable Best-Friendship",
-      description: "Across 3 years of best-friendship, you have taught me so much about life, kindness, and patience. You helped me blossom into a better person.",
+      title: "Teaching Me Kindness & Good Habits",
+      description: "You taught me how to behave with grace, how to be genuinely kind like you in this world, and instilled all your beautiful habits into me. You shaped who I am today.",
       icon: "Infinity",
     },
     {
@@ -87,9 +87,9 @@ export const loveData = {
   milestones: [
     {
       id: 1,
-      title: "3 Years of Deep Best-Friendship",
+      title: "3 Years of Friendship & Guidance",
       date: "Chapter I — The Seed of Friendship",
-      description: "Three years ago, our best-friendship began to blossom. You taught me so much about life and kindness, becoming the most comforting presence in my world.",
+      description: "Three years ago, our best-friendship began to blossom. You taught me how to behave, how to treat others with gentle kindness like yours, and instilled all the good habits that transformed my life.",
       icon: "Flower",
       tag: "3 Years Together",
     },
@@ -157,7 +157,7 @@ export const loveData = {
     paragraphs: [
       "Whatever the situation has been in my life, whether easy or unimaginably tough, you have always stood faithfully by my side. I can never thank God enough for blessing my path with someone as loyal, patient, and genuine as you.",
       "You are undeniably adorable, with eyes and beauty that light up every room—yet far beyond your outer beauty, it is your character that captivated me most. Your pure soul, your sincerity, and how selfless you are made me fall in love with you so deeply that my devotion belongs only to you.",
-      "In the 3 years of our best-friendship, you have taught me so much about life. When I was crying and felt completely broken, you were the one who consoled me, believed in me, and helped my spirits bloom again. Even though our times meeting in person have been few, every single second we shared was the absolute golden time of my life.",
+      "In the 3 years of our best-friendship, you have taught me so much about life. You taught me how to behave, how to be patient, and how to be genuinely kind like you in a world that so often forgets kindness. All the good habits and decency I carry today were learned from you. When I was crying and felt completely broken, you were the one who consoled me, believed in me, and helped my spirits bloom again. Even though our times meeting in person have been few, every single second we shared was the absolute golden time of my life.",
       "I promise you this with all my soul: I will willingly stand in the pouring rain and get soaked myself, but I will always hold the umbrella over you so not a single drop of sorrow ever touches you. To fulfill your dreams, I can gladly let go of my own choices and comforts. For your happiness, I can stand strong against the entire world. And if anyone ever asks for proof of my love, I am ready to take any exam—not just before your family, but before the whole universe.",
       "And please always remember: even if your answer is ever No, I will respect your decision with my entire heart and never give you any problems or burdens. Your comfort and peace are sacred to me. Whatever difficulties or problems ever come into our lives, you will never be alone — we will figure them out together, and we will solve them together.",
       "Just because of you, my life has changed completely for the better. I want to spend all of life's happy and sad moments walking beside you, working endlessly hard for your freedom, peace, and boundless joy, until my very last breath on this earth."
