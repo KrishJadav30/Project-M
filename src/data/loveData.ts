@@ -107,35 +107,35 @@ export const loveData = {
     },
   ],
 
-  // Polaroid Photos (Curated romantic aesthetic placeholders - replace with your own photos anytime!)
+  // Polaroid Photos (Linked directly to your photos in public/)
   photos: [
     {
       id: 1,
-      url: "https://images.unsplash.com/photo-1518199266791-5375a83190b7?auto=format&fit=crop&w=800&q=80",
-      caption: "Your favorite aesthetic 🌸",
+      url: "./WhatsApp Image 2026-09-14 at 3.46.21 PM.jpeg",
+      caption: "Your favorite moments 🌸",
       rotation: "-rotate-2",
       date: "Precious Moments",
     },
     {
       id: 2,
-      url: "https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=800&q=80",
+      url: "./WhatsApp Image 2026-09-14 at 3.46.21 PM (1).jpeg",
       caption: "Holding onto you forever 💫",
       rotation: "rotate-3",
       date: "Always Close",
     },
     {
       id: 3,
-      url: "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80",
-      caption: "Laughter under golden sunsets 🌅",
+      url: "./WhatsApp Image 2026-09-14 at 3.46.21 PM (2).jpeg",
+      caption: "That unforgettable smile 🌅",
       rotation: "-rotate-3",
       date: "Golden Hour",
     },
     {
       id: 4,
-      url: "https://images.unsplash.com/photo-1518895949257-7621c3c786d7?auto=format&fit=crop&w=800&q=80",
-      caption: "Flowers remind me of you 🌷",
+      url: "./WhatsApp Image 2026-09-14 at 3.46.22 PM.jpeg",
+      caption: "The prettiest girl ever 🌷",
       rotation: "rotate-2",
-      date: "Bloom With Love",
+      date: "My Favorite View",
     },
   ],
 
