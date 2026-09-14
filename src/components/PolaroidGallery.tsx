@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
-import { Camera, Heart, X, ZoomIn } from 'lucide-react';
+import { Camera, Flower2, X, ZoomIn } from 'lucide-react';
 import { loveData, type PolaroidPhoto } from '../data/loveData';
 
 export const PolaroidGallery: React.FC = () => {
   const [selectedPhoto, setSelectedPhoto] = useState<PolaroidPhoto | null>(null);
 
   return (
-    <section id="memories" className="py-20 px-4 sm:px-6 relative">
+    <section id="memories" className="py-20 px-4 sm:px-6 relative scroll-mt-20">
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -95,8 +95,8 @@ export const PolaroidGallery: React.FC = () => {
               <p className="font-handwriting text-3xl text-stone-900 mb-1">
                 {selectedPhoto.caption}
               </p>
-              <div className="inline-flex items-center gap-1.5 text-xs text-rose-500 font-semibold">
-                <Heart className="w-3.5 h-3.5 fill-rose-500" />
+              <div className="inline-flex items-center gap-1.5 text-xs text-rose-600 font-semibold">
+                <Flower2 className="w-3.5 h-3.5 text-rose-500" />
                 <span>{selectedPhoto.date}</span>
               </div>
             </div>

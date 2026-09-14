@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Heart, Sparkles } from 'lucide-react';
+import { Flower2, Flower, Sparkles } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { loveData } from '../data/loveData';
 
@@ -9,23 +9,23 @@ export const LoveLetter: React.FC = () => {
   const handleOpenLetter = () => {
     if (!isOpen) {
       confetti({
-        particleCount: 80,
-        spread: 70,
+        particleCount: 90,
+        spread: 75,
         origin: { y: 0.6 },
-        colors: ['#f43f5e', '#ec4899', '#fda4af', '#fb7185'],
+        colors: ['#fb7185', '#f472b6', '#fda4af', '#fecdd3', '#fff0f5', '#fed7aa'],
       });
     }
     setIsOpen(!isOpen);
   };
 
   return (
-    <section id="letter" className="py-20 px-4 sm:px-6 relative bg-gradient-to-b from-transparent via-rose-50/60 to-transparent">
+    <section id="letter" className="py-20 px-4 sm:px-6 relative scroll-mt-20 bg-gradient-to-b from-transparent via-rose-50/60 to-transparent">
       <div className="max-w-4xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-100 text-rose-600 text-xs font-bold uppercase tracking-wider mb-3">
-            <Mail className="w-3.5 h-3.5" />
-            <span>Private & Confidential</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-rose-100 text-rose-700 text-xs font-bold uppercase tracking-wider mb-3">
+            <Flower2 className="w-3.5 h-3.5 text-rose-500" />
+            <span>Private & Dedicated Only To You 🌸</span>
           </div>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-stone-900 tracking-tight">
             A Letter From My{' '}
@@ -34,7 +34,7 @@ export const LoveLetter: React.FC = () => {
             </span>
           </h2>
           <p className="mt-3 text-sm sm:text-base text-rose-900/70 max-w-md mx-auto">
-            Click the wax seal below to open and read what my heart wanted to tell you.
+            Click the botanical wax seal below to unfold what words alone could never say.
           </p>
         </div>
 
@@ -50,9 +50,9 @@ export const LoveLetter: React.FC = () => {
               <div className="absolute top-0 left-0 right-0 h-1/2 border-b-2 border-rose-300/60 bg-rose-200/40 transform origin-top" />
 
               <div className="relative z-10 flex flex-col items-center">
-                {/* Wax Seal */}
-                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-red-600 via-rose-600 to-pink-500 flex items-center justify-center shadow-lg shadow-rose-900/30 group-hover:scale-110 transition-transform mb-4 border-2 border-rose-300">
-                  <Heart className="w-8 h-8 text-white fill-white animate-pulse" />
+                {/* Botanical Blossom Wax Seal */}
+                <div className="w-16 h-16 rounded-full bg-gradient-to-tr from-rose-600 via-pink-600 to-amber-500 flex items-center justify-center shadow-lg shadow-rose-900/30 group-hover:rotate-45 transition-transform duration-500 mb-4 border-2 border-rose-300">
+                  <Flower2 className="w-8 h-8 text-white" />
                 </div>
 
                 <h3 className="font-romantic text-3xl sm:text-4xl text-rose-900 mb-1">
@@ -60,7 +60,7 @@ export const LoveLetter: React.FC = () => {
                 </h3>
                 <p className="text-xs font-semibold text-rose-700/80 uppercase tracking-widest flex items-center gap-1.5">
                   <Sparkles className="w-3.5 h-3.5 text-rose-500" />
-                  Tap to Break Seal & Open
+                  Tap to Break Seal & Read 🌸
                 </p>
               </div>
             </div>
@@ -71,10 +71,10 @@ export const LoveLetter: React.FC = () => {
             <div className="w-full max-w-2xl bg-[#fffdfa] p-7 sm:p-12 rounded-3xl shadow-2xl border border-rose-200 animate-in fade-in zoom-in-95 duration-500 relative">
               {/* Letter Top Stamp */}
               <div className="flex items-center justify-between border-b border-rose-100 pb-4 mb-6">
-                <div className="flex items-center gap-2 text-rose-500">
-                  <Heart className="w-5 h-5 fill-rose-500" />
+                <div className="flex items-center gap-2 text-rose-600">
+                  <Flower className="w-5 h-5 text-rose-500" />
                   <span className="font-bold text-xs uppercase tracking-widest text-rose-600">
-                    Straight From The Heart
+                    Straight From The Heart & Soul
                   </span>
                 </div>
                 <button
@@ -103,7 +103,7 @@ export const LoveLetter: React.FC = () => {
                   {loveData.letter.signature}
                 </p>
                 <span className="text-xs text-stone-400 font-sans mt-1">
-                  Sealed with devotion
+                  Sealed with eternal devotion 🌸
                 </span>
               </div>
             </div>

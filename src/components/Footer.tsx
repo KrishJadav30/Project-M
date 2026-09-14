@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ArrowUp } from 'lucide-react';
+import { Flower2, ArrowUp } from 'lucide-react';
 import { loveData } from '../data/loveData';
 
 export const Footer: React.FC = () => {
@@ -10,19 +10,19 @@ export const Footer: React.FC = () => {
   return (
     <footer className="py-12 px-4 sm:px-6 border-t border-rose-200/80 bg-white/70 backdrop-blur-md relative">
       <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
-        {/* Heart message */}
+        {/* Flower message */}
         <div className="flex flex-col items-center sm:items-start gap-1">
           <div className="flex items-center gap-2">
             <span className="font-romantic text-2xl sm:text-3xl text-rose-600 font-bold">
               {loveData.nickname}
             </span>
             <span className="text-xs font-semibold uppercase tracking-widest text-rose-400">
-              • Forever & Always
+              • Forever In Bloom
             </span>
           </div>
           <p className="text-xs sm:text-sm text-stone-600 font-medium flex items-center gap-1.5">
-            <span>Handcrafted with endless love for the prettiest girl in the universe</span>
-            <Heart className="w-4 h-4 text-rose-500 fill-rose-500 animate-pulse inline-block" />
+            <span>Handcrafted with endless devotion for the rarest flower in the universe</span>
+            <Flower2 className="w-4 h-4 text-rose-500 animate-spin inline-block" style={{ animationDuration: '10s' }} />
           </p>
         </div>
 

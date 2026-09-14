@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Heart, Music, VolumeX, Menu, X, Sparkles } from 'lucide-react';
+import { Flower2, Music, VolumeX, Menu, X, Sparkles } from 'lucide-react';
 import { loveData } from '../data/loveData';
 
 interface NavbarProps {
@@ -15,7 +15,7 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, toggleMusic }) => {
     { name: 'Our Story', href: '#story' },
     { name: 'Why I Love You', href: '#reasons' },
     { name: 'Memories', href: '#memories' },
-    { name: 'Love Letter', href: '#letter' },
+    { name: 'Letter', href: '#letter' },
     { name: 'Question', href: '#quiz' },
   ];
 
@@ -24,8 +24,8 @@ export const Navbar: React.FC<NavbarProps> = ({ isPlaying, toggleMusic }) => {
       <div className="max-w-6xl mx-auto glass-card rounded-2xl px-4 sm:px-6 py-3 flex items-center justify-between shadow-xl border border-rose-200/70 bg-white/85 backdrop-blur-md">
         {/* Brand / Name */}
         <a href="#hero" className="flex items-center gap-2.5 group">
-          <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-tr from-rose-500 via-pink-500 to-rose-400 shadow-md shadow-rose-300 group-hover:scale-110 transition-transform">
-            <Heart className="w-5 h-5 text-white fill-white animate-pulse" />
+          <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-tr from-rose-400 via-pink-400 to-amber-300 shadow-md shadow-rose-200 group-hover:rotate-45 transition-transform duration-500">
+            <Flower2 className="w-5 h-5 text-white" />
           </div>
           <div className="flex flex-col">
             <span className="font-romantic text-2xl sm:text-3xl text-rose-600 tracking-wide leading-none font-bold">

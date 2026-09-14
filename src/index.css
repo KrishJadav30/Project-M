@@ -92,4 +92,27 @@
   background: #f43f5e;
 }
 
+/* Floral Petal drift animation */
+@keyframes petalDrift {
+  0% {
+    transform: translateY(-20px) translateX(0px) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.85;
+  }
+  85% {
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(105vh) translateX(80px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.animate-petal {
+  animation: petalDrift var(--duration, 9s) ease-in-out infinite;
+}
+
+
 
