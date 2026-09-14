@@ -1,5 +1,5 @@
 import React from 'react';
-import { Flower2, Flower, Sparkles, Sun, Shield, Infinity as InfinityIcon } from 'lucide-react';
+import { Flower2, Flower, Sparkles, Sun, Shield, Crown, Infinity as InfinityIcon } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { loveData } from '../data/loveData';
 
@@ -16,6 +16,8 @@ export const ReasonsGrid: React.FC = () => {
         return <Sun className="w-6 h-6 text-orange-400" />;
       case 'Shield':
         return <Shield className="w-6 h-6 text-emerald-500" />;
+      case 'Crown':
+        return <Crown className="w-6 h-6 text-amber-500" />;
       case 'Infinity':
         return <InfinityIcon className="w-6 h-6 text-purple-500" />;
       default:
