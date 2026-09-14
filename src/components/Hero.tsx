@@ -11,10 +11,6 @@ export const Hero: React.FC = () => {
     seconds: 0,
   });
 
-  const [driftingPetals, setDriftingPetals] = useState<
-    Array<{ id: number; left: number; size: number; duration: number; delay: number; rotation: number }>
-  >([]);
-
   // Calculate live relationship / friendship timer
   useEffect(() => {
     const calculateTime = () => {
@@ -35,18 +31,19 @@ export const Hero: React.FC = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Generate drifting flower petals across the screen
-  useEffect(() => {
-    const petals = Array.from({ length: 22 }, (_, index) => ({
+  // Generate drifting flower petals once on initial render
+  const [driftingPetals] = useState<
+    Array<{ id: number; left: number; size: number; duration: number; delay: number; rotation: number }>
+  >(() =>
+    Array.from({ length: 22 }, (_, index) => ({
       id: index,
       left: Math.random() * 96,
       size: Math.floor(Math.random() * 16) + 14,
       duration: Math.floor(Math.random() * 6) + 8,
       delay: Math.random() * 6,
       rotation: Math.floor(Math.random() * 360),
-    }));
-    setDriftingPetals(petals);
-  }, []);
+    }))
+  );
 
   const triggerPetalShower = () => {
     const count = 220;
