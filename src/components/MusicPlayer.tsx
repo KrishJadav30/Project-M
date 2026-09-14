@@ -5,38 +5,38 @@ interface MusicPlayerProps {
   setIsPlaying: (playing: boolean) => void;
 }
 
+// Gentle romantic music box / harp chord progression notes (Hz)
+// Progression: Cmaj7 - Am7 - Fmaj7 - G7
+const CHORDS = [
+  [261.63, 329.63, 392.00, 493.88], // C, E, G, B
+  [220.00, 261.63, 329.63, 392.00], // A, C, E, G
+  [174.61, 220.00, 261.63, 329.63], // F, A, C, E
+  [196.00, 246.94, 293.66, 349.23], // G, B, D, F
+];
+
+function playNote(ctx: AudioContext, freq: number, time: number) {
+  const osc = ctx.createOscillator();
+  const gain = ctx.createGain();
+
+  // Sine wave creates a dreamy music box / celesta tone
+  osc.type = 'sine';
+  osc.frequency.setValueAtTime(freq, time);
+
+  // Soft attack and smooth gentle decay
+  gain.gain.setValueAtTime(0, time);
+  gain.gain.linearRampToValueAtTime(0.06, time + 0.08);
+  gain.gain.exponentialRampToValueAtTime(0.0001, time + 2.2);
+
+  osc.connect(gain);
+  gain.connect(ctx.destination);
+
+  osc.start(time);
+  osc.stop(time + 2.2);
+}
+
 export const MusicPlayer: React.FC<MusicPlayerProps> = ({ isPlaying }) => {
   const audioContextRef = useRef<AudioContext | null>(null);
   const timerRef = useRef<number | null>(null);
-
-  // Gentle romantic music box / harp chord progression notes (Hz)
-  // Progression: Cmaj7 - Am7 - Fmaj7 - G7
-  const chords = [
-    [261.63, 329.63, 392.00, 493.88], // C, E, G, B
-    [220.00, 261.63, 329.63, 392.00], // A, C, E, G
-    [174.61, 220.00, 261.63, 329.63], // F, A, C, E
-    [196.00, 246.94, 293.66, 349.23], // G, B, D, F
-  ];
-
-  const playNote = (ctx: AudioContext, freq: number, time: number) => {
-    const osc = ctx.createOscillator();
-    const gain = ctx.createGain();
-
-    // Sine wave creates a dreamy music box / celesta tone
-    osc.type = 'sine';
-    osc.frequency.setValueAtTime(freq, time);
-
-    // Soft attack and smooth gentle decay
-    gain.gain.setValueAtTime(0, time);
-    gain.gain.linearRampToValueAtTime(0.06, time + 0.08);
-    gain.gain.exponentialRampToValueAtTime(0.0001, time + 2.2);
-
-    osc.connect(gain);
-    gain.connect(ctx.destination);
-
-    osc.start(time);
-    osc.stop(time + 2.2);
-  };
 
   useEffect(() => {
     if (isPlaying) {
@@ -55,14 +55,14 @@ export const MusicPlayer: React.FC<MusicPlayerProps> = ({ isPlaying }) => {
 
       const scheduleNotes = () => {
         if (!ctx) return;
-        const currentChord = chords[chordIndex];
+        const currentChord = CHORDS[chordIndex];
         const freq = currentChord[noteIndex];
         playNote(ctx, freq, ctx.currentTime);
 
         noteIndex++;
         if (noteIndex >= currentChord.length) {
           noteIndex = 0;
-          chordIndex = (chordIndex + 1) % chords.length;
+          chordIndex = (chordIndex + 1) % CHORDS.length;
         }
       };
 
